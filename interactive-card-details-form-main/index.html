@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Interactive card details form</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="card-section">
+
+      <div class="credit-card">
+        <div class="front">
+          <img src="images/card-logo.svg" alt="" id="cardlogo">
+          <h3 id="input-cardnumber">0000 0000 0000 0000</h3>
+          <div class="input-creditcard">
+            <div>
+              <span id="input-cardname">Jane Appleseed</span>
+            </div>
+            <div>
+              <span id="input-cardmonth">00</span> /
+              <span id="input-cardyear">00</span>
+            </div>
+  
+          </div>
+        </div>
+        <div class="back">
+          <span id="input-cardcvc">000</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-section">
+
+      <div class="input-field">
+        <div class="form">
+          <label for="">CARDHOLDER NAME</label>
+          <input type="text" autocomplete="cc-name" id="cardname" placeholder="e.g. Jane Appleseed">
+          <span></span>
+        </div>
+  
+        <div class="form">
+          <label for="">CARD NUMBER</label>
+          <input type="number" autocomplete="cc-number" id="cardnumber" placeholder="e.g. 1234 5678 9123 0000">
+          <span></span>
+        </div>
+  
+        <div class="form-twin">
+          <div class="form">
+            <label for="">EXP. DATE (MM/YY)</label>
+            <div class="form-double">
+              <div class="form">
+              <input type="number" autocomplete="cc-exp-month" id="cardmonth" placeholder="MM">
+              <span></span>
+              </div>
+              <div class="form">
+              <input type="number" autocomplete="cc-exp-year" id="cardyear" placeholder="YY">
+              <span></span>
+              </div>
+            </div>
+          </div>
+          <div class="form">
+            <label for="">CVC</label>
+            <input type="number" autocomplete="cc-csc" id="cardcvc" placeholder="e.g. 123">
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="success">
+        <img src="images/icon-complete.svg" alt="" id="success-complete">
+        <h1>THANK YOU!</h1>
+        <p>We've added your card details</p>
+      </div>
+  
+
+      <button type="button" id="submit">Confirm</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

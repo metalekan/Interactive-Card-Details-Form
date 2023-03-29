@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+body{
+    max-height: 100vh;
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    /* display: grid; */
+    /* justify-content: center; */
+    display: flex;
+    justify-content: space-between;
+    /* grid-template-columns: 1fr 2fr; */
+    padding: 1.25rem;
+}
+
+.card-section{
+    width: 30vw;
+    position: relative;
+    background: url(images/bg-main-desktop.png) no-repeat;
+}
+
+.front{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    gap: 1rem;
+    border-radius: 9px;
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    height: 200px;
+    width: 350px;
+    padding: 1.5rem;
+    background: url(images/bg-card-front.png) no-repeat center center/ cover;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#cardlogo{
+    width: 90px;
+}
+
+.back{
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    height: 200px;
+    width: 350px;
+    border-radius: 9px;
+    background: url(images/bg-card-back.png) no-repeat center center/ cover;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.input-creditcard{
+    display: flex;
+    justify-content: space-between;
+}
+
+#input-cardcvc{
+    position: absolute;
+    right: 45px;
+    top: 87px;
+}
+
+
+.form-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    margin: 0 auto;
+}
+
+.input-field{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30vw;
+    padding: 2rem 0;
+}
+
+.success{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+#success-complete{
+    width: 100px;
+}
+
+.success p{
+    font-weight: 600;
+    color: hsl(279, 6%, 55%);
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-twin{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-double{
+    display: flex;
+    gap: 0.5rem;
+}
+
+#cardmonth{
+    width: 5rem;
+}
+
+#cardyear{
+    width: 5rem;
+}
+
+.error{
+    border: 1px solid hsl(0, 100%, 66%);
+}
+
+.error-text{
+    font-size: 12px;
+    color: hsl(0, 100%, 66%);
+    font-weight: 500;
+}
+
+label{
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: hsl(278, 68%, 11%);
+}
+
+input{
+    font-weight: 500;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid hsl(270, 3%, 87%);
+}
+
+input:hover, input:focus{
+    border: 1px solid hsl(279, 6%, 55%);
+}
+
+button{
+    border: none;
+    width: 30vw;
+    font-size: 1.25rem;
+    padding: 1rem 0;
+    border-radius: 6px;
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(0, 0%, 100%);
+}
+
+button:hover{
+    opacity: 0.95;
+    cursor: pointer;
+}
+
+
+
+
+@media (max-width: 800px) {
+    .wrapper{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        padding: 0;
+    }
+
+    .card-section{
+        height: 30vh;
+        width: 100vw;
+        background: url(./images/bg-main-mobile.png) no-repeat center center/ cover;
+    }
+
+    .form-section{
+        height: 60vh;
+        width: 90%;
+    }
+
+    .input-field{
+        width: 100%;
+    }
+    
+    .front{
+        height: 10rem;
+        width: 18rem;
+        top: 50%;
+        left: 10%;
+        z-index: 1;
+    }
+
+    .back{
+        height: 10rem;
+        width: 18rem;
+        top: 10%;
+        left: 20%;
+    }
+    
+    #input-cardcvc{
+        position: absolute;
+        right: 30px;
+        top: 70px;
+        font-size: 0.75rem;
+    }
+    
+    button{
+        width: 100%;
+    }
+
+    label{
+        font-size: 0.8rem;
+    }
+
+    #cardmonth{
+        width: 4rem;
+    }
+    
+    #cardyear{
+        width: 4rem;
+    }
+}
